@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { usePostStore } from "@/store/postStore";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Form, StyledInput, StyledButton } from "./PostInput.styles";
 
 export const PostInput = () => {
   const [text, setText] = useState("");
@@ -18,13 +17,13 @@ export const PostInput = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 my-4">
-      <Input
-        placeholder="What's on your mind?"
+    <Form onSubmit={handleSubmit}>
+      <StyledInput
+        placeholder="What's on your mind today?"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <Button type="submit">Post</Button>
-    </form>
+      <StyledButton type="submit">Post</StyledButton>
+    </Form>
   );
 };
