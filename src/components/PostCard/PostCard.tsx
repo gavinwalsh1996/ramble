@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+import { ChevronUp, ChevronDown } from "lucide-react";
 import {
   CardWrapper,
   PostContent,
@@ -32,9 +33,13 @@ export const PostCard = ({
       <PostContent>
         <PostText>{text}</PostText>
         <VoteSection>
-          <VoteArrow onClick={() => onVote(id, "upvote")}>⬆</VoteArrow>
+          <VoteArrow onClick={() => onVote(id, "upvote")}>
+            <ChevronUp size={18} />
+          </VoteArrow>
           <VoteCount>{voteCount}</VoteCount>
-          <VoteArrow onClick={() => onVote(id, "downvote")}>⬇</VoteArrow>
+          <VoteArrow onClick={() => onVote(id, "downvote")}>
+            <ChevronDown size={18} />
+          </VoteArrow>
         </VoteSection>
       </PostContent>
     </CardWrapper>
