@@ -19,7 +19,7 @@ export const PostInput = () => {
   return (
     <Form onSubmit={handleSubmit}>
       <StyledInput
-        placeholder="What's on your mind today?"
+        placeholder="Speak your mind..."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />

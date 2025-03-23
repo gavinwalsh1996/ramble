@@ -3,45 +3,50 @@ import styled from "styled-components";
 export const Form = styled.form`
   display: flex;
   gap: 0.75rem;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   flex-wrap: wrap;
+  align-items: center;
 `;
 
 export const StyledInput = styled.input`
   flex: 1;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.1rem;
   font-size: 1rem;
+  border-radius: 14px;
   border: none;
-  border-radius: 12px;
-  background: linear-gradient(145deg, #f0f0f3, #cacaca);
-  box-shadow: inset 2px 2px 5px #bebebe, inset -2px -2px 5px #ffffff;
-  outline: none;
-  transition: all 0.3s ease;
+  background: #f3f4f6;
+  color: #111827;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, background 0.2s ease;
 
   &:focus {
-    box-shadow: 0 0 0 3px #c084fc66;
-    background: white;
+    outline: none;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(66, 220, 190, 0.4);
   }
 `;
 
 export const StyledButton = styled.button`
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  background: linear-gradient(135deg, #ec4899, #8b5cf6);
-  color: white;
-  font-weight: bold;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #34d399, #38bdf8);
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 4px 12px rgba(52, 211, 153, 0.3);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(52, 211, 153, 0.45);
   }
 
   &:active {
-    transform: scale(0.98);
+    transform: scale(0.97);
   }
 `;

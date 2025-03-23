@@ -9,25 +9,28 @@ export const PageWrapper = styled.div`
 `;
 
 export const Header = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   text-align: center;
-  font-weight: 800;
-  background: linear-gradient(90deg, #ec4899, #8b5cf6);
+  font-weight: 900;
+  background: linear-gradient(90deg, #59e4a8, #42caff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
+  letter-spacing: -0.03em;
 `;
 
 export const Subheader = styled.p`
   text-align: center;
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #4b5563; /* modern gray-700 */
+  margin-bottom: 2.5rem;
+  font-weight: 500;
 `;
 
 export const EmptyState = styled.p`
   text-align: center;
-  color: #aaa;
+  color: #9ca3af; /* gray-400 */
   font-style: italic;
+  font-size: 0.95rem;
   margin-top: 1.5rem;
 `;
