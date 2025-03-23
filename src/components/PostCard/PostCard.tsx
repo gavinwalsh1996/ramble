@@ -1,7 +1,14 @@
 "use client";
 
 import styled from "styled-components";
-import { CardWrapper, PostText, VoteRow, VoteButton } from "./PostCard.styles";
+import {
+  CardWrapper,
+  PostContent,
+  PostText,
+  VoteSection,
+  VoteArrow,
+  VoteCount,
+} from "./PostCard.styles";
 
 type PostCardProps = {
   id: string;
@@ -18,17 +25,18 @@ export const PostCard = ({
   downvotes,
   onVote,
 }: PostCardProps) => {
+  const voteCount = upvotes - downvotes;
+
   return (
     <CardWrapper>
-      <PostText>{text}</PostText>
-      <VoteRow>
-        <VoteButton onClick={() => onVote(id, "upvote")} $type="up">
-          ⬆ {upvotes}
-        </VoteButton>
-        <VoteButton onClick={() => onVote(id, "downvote")} $type="down">
-          ⬇ {downvotes}
-        </VoteButton>
-      </VoteRow>
+      <PostContent>
+        <PostText>{text}</PostText>
+        <VoteSection>
+          <VoteArrow onClick={() => onVote(id, "upvote")}>⬆</VoteArrow>
+          <VoteCount>{voteCount}</VoteCount>
+          <VoteArrow onClick={() => onVote(id, "downvote")}>⬇</VoteArrow>
+        </VoteSection>
+      </PostContent>
     </CardWrapper>
   );
 };
